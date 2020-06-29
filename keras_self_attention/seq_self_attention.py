@@ -105,6 +105,7 @@ class SeqSelfAttention(keras.layers.Layer):
         super(SeqSelfAttention, self).build(input_shape)
 
     def _build_additive_attention(self, input_shape):
+        print('\n\n\n********\n', input_shape, '\n******\n\n\n')
         feature_dim = int(input_shape[2])
 
         self.Wt = self.add_weight(shape=(feature_dim, self.units),
